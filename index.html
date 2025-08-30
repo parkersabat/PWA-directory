@@ -11,22 +11,17 @@
 <body>
   <h1>PWA Directory</h1>
 
-  <!-- Search bar -->
-  <input 
-    type="text" 
-    id="search-bar" 
-    placeholder="Search apps..." 
-    style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 20px;"
-  >
+  <input type="text" id="search-bar" placeholder="Search apps..." style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 20px;">
+  
+  <a href="https://forms.gle/AF79gv8BR4CFdiBa8" class="submit-btn">Submit your app for Review</a>
 
-  <!-- Results list -->
   <div class="search-results">Loading apps...</div>
 
   <script src="index.js"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js")
+        navigator.serviceWorker.register("/s.js")
         .then(() => console.log("Service Worker registered"))
         .catch(err => console.error("Service Worker failed:", err));
     }

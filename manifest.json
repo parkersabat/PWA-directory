@@ -1,6 +1,6 @@
 {
   "name": "PWA Directory",
-  "short_name": "PWAs",
+  "short_name": "The Directory",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#121212",

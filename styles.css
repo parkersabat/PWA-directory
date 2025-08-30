@@ -96,3 +96,32 @@ body {
   background: #4a90e2;
   color: #fff;
 }
+
+/* Submit for Review Button */
+.submit-btn {
+  display: inline-block;
+  background: #4a90e2; /* Bright blue like App Store "action" */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background: #357ab8; /* Slightly darker blue on hover */
+}
+
+.submit-btn:active {
+  transform: scale(0.97); /* Subtle press effect */
+}
+
+.submit-btn:disabled {
+  background: #444;
+  color: #999;
+  cursor: not-allowed;
+}

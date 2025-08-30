@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-bar");
   let allApps = []; // cache of all apps
 
-  fetch("apps.json")
+  fetch("https://raw.githubusercontent.com/PWebGames/apps/refs/heads/main/apps.json")
     .then(response => response.json())
     .then(apps => {
       resultsContainer.innerHTML = ""; 
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🔹 Local cache helpers
   function cacheIcon(url, iconUrl) {
     try {
       const cache = JSON.parse(localStorage.getItem("appIcons")) || {};
@@ -94,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 🔹 Search filter
+  // Search filter
   searchInput.addEventListener("input", e => {
     const query = e.target.value.toLowerCase();
     const filtered = allApps.filter(app =>
